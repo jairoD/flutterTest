@@ -21,8 +21,8 @@ class _ProductsState extends State<Products> {
     var size = MediaQuery.of(context).size;
 
     /*24 is for notification bar on Android*/
-    final double itemHeight = (size.height - kToolbarHeight - 24) / 2;
-    final double itemWidth = size.width * 0.6;
+    final double itemHeight = size.height / 2;
+    final double itemWidth = size.width / 3;
     return Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Theme.of(context).backgroundColor,
@@ -193,8 +193,10 @@ class _ProductsState extends State<Products> {
       color: Colors.white,
       child: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          childAspectRatio: itemWidth / 180.0,
           crossAxisCount: 2,
-          childAspectRatio: (itemWidth / itemHeight),
+          crossAxisSpacing: 5.0,
+          mainAxisSpacing: 5.0,
         ),
         itemCount:
             categoryProvider.category != "all" ? myItems.length : all.length,
@@ -307,7 +309,7 @@ class _ProductsState extends State<Products> {
                 padding: const EdgeInsets.all(10.0),
                 child: new Text(_item.description,
                     style: Theme.of(context).textTheme.headline2,
-                    maxLines: 3,
+                    maxLines: 2,
                     overflow: TextOverflow.ellipsis),
               )
             ],

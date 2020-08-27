@@ -124,9 +124,12 @@ class _DetailsState extends State<Details> {
                       SizedBox(
                         height: 15,
                       ),
-                      new Text(
-                        widget.selectedItem.description,
-                        style: Theme.of(context).textTheme.bodyText1,
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: new Text(
+                          widget.selectedItem.description,
+                          style: Theme.of(context).textTheme.bodyText1,
+                        ),
                       ),
                       SizedBox(
                         height: 15,
