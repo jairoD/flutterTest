@@ -13,7 +13,7 @@ flutter run
 
 ## Capturas de pantalla
 
-#### - Dispositivo: Huawei Y9 2019####
+#### - Dispositivo: Huawei Y9 2019 ####
 ![](screens/dispositivo/118483619_1175008472869116_623578659035276087_n.jpg)
 ![](screens/dispositivo/118472220_314728593163219_5650557491994365738_n.jpg)
 ![](screens/dispositivo/118398655_313385256639083_3730086634094148951_n.jpg)
